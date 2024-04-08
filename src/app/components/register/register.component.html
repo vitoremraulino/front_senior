@@ -1,0 +1,23 @@
+<div class="body-style" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="form-sample">
+      <mat-card-header>
+        <mat-card-title>Cadastrar hospede</mat-card-title>
+      </mat-card-header>  
+      <form class="form-inputs" [formGroup]="registerForm" (ngSubmit)="onSubmit()" >  
+        <mat-card-content fxLayout="column" fxLayoutAlign="">
+          <mat-form-field class="example-full-width">
+            <input matInput formControlName="nome" placeholder="Nome">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput formControlName="documento" placeholder="Documento">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput formControlName="telefone" placeholder="Telefone">
+          </mat-form-field>  
+        </mat-card-content>  
+        <button mat-stroked-button type="submit" color="accent" class="btn-block">Cadastrar hóspede</button>  
+      </form>
+    </mat-card>
+  </div>

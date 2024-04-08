@@ -1,0 +1,40 @@
+<div class="body-style" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <mat-card class="form-sample">
+      <mat-card-header>
+        <mat-card-title>Check-in</mat-card-title>
+      </mat-card-header>  
+      <form class="form-inputs" [formGroup]="registerForm" (ngSubmit)="onSubmit()">  
+        <mat-card-content fxLayout="column" fxLayoutAlign="">
+        <mat-form-field>
+          <mat-label>Data de entrada</mat-label>
+          <input matInput [matDatepicker]="dataentrada">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="dataentrada"></mat-datepicker-toggle>
+          <mat-datepicker #dataentrada></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>data de saida</mat-label>
+          <input matInput [matDatepicker]="datasaida">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="datasaida"></mat-datepicker-toggle>
+          <mat-datepicker #datasaida></mat-datepicker>
+        </mat-form-field>  
+        <mat-form-field class="example-full-width">
+          <input matInput formControlName="documento" placeholder="Documento">
+        </mat-form-field>  
+        <mat-form-field class="example-full-width">
+          <input matInput formControlName="adicional" placeholder="Adicional">
+        </mat-form-field>  
+        </mat-card-content>  
+        <button mat-stroked-button type="submit" color="accent" class="btn-block">Check-in</button>  
+      </form>
+    </mat-card>
+    <mat-card class="form-sample">
+        <mat-card-header>
+          <mat-card-title>Listagem</mat-card-title>
+        </mat-card-header>  
+          <mat-card-content>
+            <span>Em processo...</span>
+          </mat-card-content>
+      </mat-card>
+  </div>
